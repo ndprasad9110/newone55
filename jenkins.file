@@ -1,0 +1,13 @@
+node('built-in')
+ {
+   stage('Continuous download')
+    {
+   git 'https://github.com/ndprasad9110/sparkjava-war-example.git'
+     }
+
+    stage('Continuous build')
+    {
+     sh 'mvn package'
+   
+     }
+}
